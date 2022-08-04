@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <title><%= title %></title>
+</head>
+<body>
+    <div class="form-container">
+      <form class="contato-form">
+        <h2>Contato</h2>
+        <input type="text" id="name" placeholder="Nome"></br>
+        <select class="custom-select my-1 mr-sm-2" id="email">
+          <option selected>Escolha um email</option>
+          <option value="jeanlucasplay@gmail.com">jeanlucasplay@gmail.com</option>
+          <option value="jeanlucasplay1@gmail.com">jeanlucasplay1@gmail.com</option>
+          <option value="suporte@fapesc.sc.gov.br">suporte@fapesc.sc.gov.br</option>
+          <option value="plataforma@fapesc.sc.gov.br">plataforma@fapesc.sc.gov.br</option>
+        </select><br>
+        <input type="test" id="subject" placeholder="Assunto"></br>
+        <textarea id="message" placeholder="Digite sua mensagem" cols="30" rows="10"></textarea></br>
+        <input type="submit" class="submit" value="Mandar Mensagem">
+      </form>
+    </div>
+
+  <div class="container">
+    <h3>teste autenticação google</h3>
+    <div id="g_id_onload"
+         data-client_id="a"
+         data-context="signin"
+         data-ux_mode="popup"
+         data-login_uri="a"
+         data-auto_prompt="false">
+    </div>
+    <div class="g_id_signin"
+         data-type="standard"
+         data-shape="pill"
+         data-theme="filled_black"
+         data-text="$ {button.text}"
+         data-size="large"
+         data-logo_alignment="left">
+    </div>
+  </div>
+
+<script src="javascripts/js.js"></script>
+</body>
+</html>
